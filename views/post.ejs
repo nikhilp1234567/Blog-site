@@ -1,0 +1,13 @@
+<%- include("partials/header.ejs")%>
+
+<body class="post-body">
+    <div class="tester">
+        <h1>Create a Blog Post</h1>
+        <div class="post-form-div">
+        <form class="post-form" action="/submit" method="POST">
+            <input class="post-input-1" name="title" placeholder="Enter book title..." type="text">
+            <input class="post-input-2" name="description" placeholder="Enter book description..." type="text">
+            <input class="post-submit" type="submit" value="submit">
+        </form>
+    </div></div>
+    <%- include("partials/footer.ejs")%>

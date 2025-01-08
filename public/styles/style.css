@@ -1,0 +1,268 @@
+*{
+    scroll-behavior: smooth;
+    /* outline: 1px solid red;  */
+}
+html{
+    padding: 0px !important;
+    margin: 0px !important;
+}
+body{
+background-color: #223d3c;
+padding: 0px !important;
+margin: 0px !important;
+
+}
+
+.home-page{
+    display: flex;
+    flex-direction: row;
+    
+    @media (max-width: 800px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.left-hand{
+    background-color: #f8f3f2;
+    border-radius: 0% 100px 100px 0%;
+    width: 60%;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+
+    @media (max-width: 800px) {
+        border-radius: 0% 0% 100px 100px;
+        width: 90%;
+    }
+
+}
+
+.book-image{
+    background-image:url(../images/old-books.jpg);
+    background-size: cover;
+    height: 60%;
+    width: 100%;
+    border-radius: 100px ; 
+}
+
+.right-hand{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100vh;
+    padding: 0px 5%;
+
+    @media (max-width: 800px) {
+    height: auto;
+    margin: 5% 0%;
+    width: 90vw;
+    }
+
+}
+
+.link-holder > button, .link-holder > form > input {
+  border: 0px;
+  padding: 40px 30px;
+  color: white;
+  font-family: "Montserrat";
+  font: 100;
+  background-color: #223d3c;
+  width: 100%;
+  font-size: 25px;
+  transition-duration: 0.5s;
+}
+
+.link-holder > button:hover, .link-holder > form > input:hover{
+    background-color: #f8f3f2;
+    color: black;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+.link-holder > form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.link-holder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    padding: 1px 0px;
+    background-color: white;
+    width: 100%;
+}
+
+h1{
+    font-family: "DynaPuff";
+    font-size: 50px;
+    text-align: center;
+    margin: 0px;
+}
+
+#second-page{
+    padding: 5%;
+    background-color: #795c4d;
+    color: #f8f3f2;
+    font-family: "Montserrat";
+    height: 100vh;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 2.5% ;
+}
+
+.blog-holder{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-element{
+    border-radius: 100px;
+    max-width: 100%;
+    padding: 2.5%;
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    background-color: #f8f3f2;
+    color: black;
+    font-family: "Montserrat";
+    margin-bottom: 2.5%;
+}
+
+.image{
+    height: auto;
+    min-width: 300px;
+    border-radius: 100px;
+    background-size: cover;
+    margin-right: 2.5%;
+}
+
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #f8f3f2;
+    background-color: #223d3c;
+    height: 10vh;
+    min-width: 100vw;
+    padding: 2% 0px;
+    font-family: "Montserrat";
+    font: 100;
+}
+
+
+/* for the post page now */
+
+.post-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f3f2;
+    min-height: 100vh;
+
+}
+
+
+.tester{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    width: 90%;
+    flex-grow: 1;
+}
+
+.post-form-div{
+    display: flex;
+    background-color: #223d3c;
+    border-radius: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    flex-grow: 1;
+    max-width: 100%;
+    margin-top: 5%;
+
+    @media (min-width: 800px) {
+        padding: 2.5% 5%;
+        margin-top: 2.5%;
+    }
+
+    @media (max-width: 800px) {
+        padding: 10%;
+    }
+
+    @media (max-width: 500px) {
+        padding: 15%;
+    }
+}
+
+
+.post-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.post-input-1{
+width: 100%;
+border-radius: 100px;
+height: 40px;
+border: 0px;
+    outline: 5px solid black;
+
+    @media (max-width: 800px) {
+        height: 60px;
+
+    }
+}
+
+.post-input-2{
+    flex-grow: 1;
+    width: 100%;
+    border-radius: 50px;
+    background-color: #f8f3f2;
+    border: 0px;
+    outline: 5px solid black;
+
+}
+
+.post-submit{
+    padding: 20px 80px;
+    border-radius: 100px;
+    background-color: #795c4d;
+    font-family: "DynaPuff";
+    font-size: 20px;
+    color: #f8f3f2;
+    border: 0px;
+    transition-duration: 0.5s;
+    }
+
+    .post-submit:hover{
+        background-color:#223d3c;
+        /* color: black; */
+        outline: 5px solid black;
+    }

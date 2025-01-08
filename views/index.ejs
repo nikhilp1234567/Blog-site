@@ -1,0 +1,35 @@
+<%- include("partials/header.ejs")%>
+<body>
+    
+    <div class="home-page">
+        <div class="homepage left-hand">
+            <img style="height: 100px;" src="images/book2.png" alt="">
+            <h1>Nikhil's Book <br/>Blog</h1>
+            <div class="homepage book-image"></div>
+        </div>
+    
+        <div class="homepage right-hand">
+            <div class="link-holder">
+               <button> <a href="#second-page">View Book Blog Entries</a></button>
+                <form action="/createpost" method="GET">
+                    <input type="submit" value="Create Blog Post">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="second-page" class="second-page">
+        <div class="second title"><h1>View Existing Blogs</h1></div>
+        <div class="second blog-holder"> 
+
+            <% entries.forEach(function(content) { %>
+                <%- content %>
+            <% }); %>
+
+        </div>
+    </div>
+    <%- include("partials/footer.ejs")%>
+
+    </body>
+    </html>
+    
