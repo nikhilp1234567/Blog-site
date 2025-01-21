@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs")%>
+
+<body class="post-body">
+    <div class="tester">
+        <h1>Update a Blog Post</h1>
+        <div class="post-form-div">
+        <form class="post-form" action="/setupdate" method="POST">
+            <input type="number" hidden="true" name='id' value="<%=result.id%>">
+            <input class="post-input-1" name="updatedTitle" type="text" value="<%=result.title%>">
+            <input class="post-input-2" name="updatedBody" value="<%=result.body%>" type="text">
+            <input class="post-input-2" type="number" name="updatedRating" value="<%=result.rating%>" type="text">
+            <input class="post-input-2" name="updatedIsbn" value="<%=result.isbn%>" type="text">
+            <input class="post-submit" type="submit" value="Update">
+        </form>
+    </div></div>
+    <%- include("partials/footer.ejs")%>

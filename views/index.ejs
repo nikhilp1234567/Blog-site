@@ -20,10 +20,39 @@
     
     <div id="second-page" class="second-page">
         <div class="second title"><h1>View Existing Blogs</h1></div>
+        <div class="second sort" style="display: flex; flex-direction: row; align-items: center; gap: 20px; justify-content: center;">
+            <h3>Sort by: </h3>
+            <form action="/sort" method="post">
+            <select name="sortBy">
+                <option value="rating">Rating</option>
+                <option value="date">Date of Creation</option>
+            </select>
+            <select name="ascDesc">
+                <option value="ASC">Ascending</option>
+                <option value="DESC">Decending</option>
+            </select>
+            <input type="submit" placeholder="Sort">
+            </form>
+        </div>
         <div class="second blog-holder"> 
+            <% entries.forEach((entry)=>{ %>
+                <div class="blog-element" id= "<%=entry.id%>">
+                    <div class="image" style="background-image: url('<%=entry.image%>')"></div>  
+                    <div class="content">
+                        <h3><strong><%=entry.title%></strong></h3>
+                        <p><%=entry.body%></p>
+                        <p><small>Rating : <%=entry.rating%> / 10</small> </p>
+                        <p><small>Date Created: <%=entry.date%></small></p>
+                        <p>ISBN: <%=entry.isbn%></p>
 
-            <% entries.forEach(function(content) { %>
-                <%- content %>
+                    </div>
+                    <form action="/delete" method="post">
+                        <button class="delete" onclick="this.form.submit()" name="deleteItemId" value="<%= entry.id %>">
+                      </form>
+                      <form action="/update" method="post">
+                        <button class="delete" style="background-color:aqua;"onclick="this.form.submit()" name="updateItemId" value="<%= entry.id %>">
+                      </form>
+                </div>           
             <% }); %>
 
         </div>
