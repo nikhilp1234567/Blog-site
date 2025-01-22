@@ -3,19 +3,21 @@ import express from "express";
 import axios from 'axios';
 import bodyParser from "body-parser";
 import morgan from "morgan";
+import env from 'dotenv';
 let app = express();
 let entries = [];
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(morgan('dev'));
+env.config();
 
 const db = new pg.Client({
-  user: "postgres",
-  host: "localhost",
-  database: "blogsite",
-  password: "Nik26hil03!",
-  port: 5432,
+  user: process.env.NAME,
+  host: process.env.HOST,
+  database: process.env.DATABASE,
+  password: process.env.PASSWORD,
+  port: process.env.PORT,
 });
 db.connect();
 
