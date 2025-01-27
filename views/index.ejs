@@ -21,18 +21,18 @@
     <div id="second-page" class="second-page">
         <div class="second title"><h1>View Existing Blogs</h1></div>
         <div class="second sort" style="display: flex; flex-direction: row; align-items: center; gap: 20px; justify-content: center;">
-            <h3>I want to sort the book reviews by</h3>
-            <form style="display:flex; flex-direction: row; height: 40px; justify-content: center; align-items: center; gap: 5px;" action="/sort" method="post">
+            <h3>I want to sort the book reviews by:</h3>
+            <form class="sort-form" action="/sort" method="post">
             <select name="sortBy">
                 <option value="rating">Rating</option>
                 <option value="date">Date of Creation</option>
             </select>
-            <h3>, in</h3>
+            <h3>in</h3>
             <select name="ascDesc">
                 <option value="ASC">Ascending</option>
                 <option value="DESC">Decending</option>
             </select>
-            <h3>order: </h3>
+            <h3>order.</h3>
             <input type="submit" placeholder="Sort">
             </form>
         </div>
@@ -48,11 +48,11 @@
                         <p>ISBN: <%=entry.isbn%></p>
 
                     </div>
-                    <form action="/delete" method="post">
-                        <button class="delete" onclick="this.form.submit()" name="deleteItemId" value="<%= entry.id %>">
-                      </form>
                       <form action="/update" method="post">
-                        <button class="delete" style="background-color:aqua;"onclick="this.form.submit()" name="updateItemId" value="<%= entry.id %>">
+                        <button class="delete" style="background-color:royalblue;"onclick="this.form.submit()" name="updateItemId" value="<%= entry.id %>">Modify</button>
+                      </form>
+                      <form class="modDel" action="/delete" method="post">
+                        <button class="delete" onclick="this.form.submit()" name="deleteItemId" value="<%= entry.id %>">Delete</button>
                       </form>
                 </div>           
             <% }); %>

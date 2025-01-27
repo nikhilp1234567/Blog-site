@@ -125,6 +125,42 @@ h1{
     margin-bottom: 2.5% ;
 }
 
+.sort-form{
+    display:flex; 
+    flex-direction: row;
+     height: 40px; 
+     justify-content: center;
+      align-items: center;
+       gap: 5px;
+}
+
+.sort-form select { 
+ background-color: rgba(0,0,0,0);
+ color: white;
+ align-items: center;
+ text-align: center;
+ border-radius: 50px;
+padding: 10px;
+outline: 3px solid black;
+border: 0px;
+margin: 0px 5px;
+}
+
+.sort-form input{
+    background-color: white;
+    color: black;
+    transition-duration: 0.5s;
+    border: 0px;
+    padding: 15px;
+    margin: 0px 5px; 
+    border-radius: 50px;
+}
+
+.sort-form input:hover{
+    background-color: black;
+    color: #795c4d;
+}
+
 .blog-holder{
     height: auto;
     display: flex;
@@ -163,6 +199,11 @@ h1{
 .blog-element > form{
     display: flex;
     margin-left: auto;
+}
+
+.modDel{
+    margin-left: 10px !important;
+    padding-left: 0px !important;
 }
 
 .delete{
