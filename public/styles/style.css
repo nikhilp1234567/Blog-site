@@ -117,7 +117,7 @@ h1{
     background-color: #795c4d;
     color: #f8f3f2;
     font-family: "Montserrat";
-    height: 100vh;
+    height: max-content;
 }
 
 .title {
@@ -143,6 +143,8 @@ h1{
     color: black;
     font-family: "Montserrat";
     margin-bottom: 2.5%;
+    margin-top: 2.5%;
+
 }
 
 .image{
